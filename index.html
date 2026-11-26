@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=utf8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Kalkulator Kapasitas Video</title>
+<link rel="icon" type="image/x-icon" href="image/mp4.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body></body>
+<main class="wrap">
+  <header class="hero">
+    <h1>Kalkulator Kapasitas Video</h1>
+    <p>Perkirakan ukuran file video dari durasi dan kualitas pilihan Anda.</p>
+  </header>
+
+  <section class="card">
+    <h2>Durasi</h2>
+    <div class="grid3">
+      <label>Jam<input id="durJam" type="number" min="0" inputmode="numeric" value="1"></label>
+      <label>Menit<input id="durMenit" type="number" min="0" inputmode="numeric" value="30"></label>
+      <label>Detik<input id="durDetik" type="number" min="0" inputmode="numeric" value="0"></label>
+    </div>
+
+    <h2 style="margin-top:22px">Kualitas</h2>
+    <div class="chips" id="chips"></div>
+  </section>
+
+  <section class="card" aria-live="polite">
+    <h2>Perkiraan ukuran file</h2>
+    <div class="result" id="hasil"></div>
+  </section>
+
+  <section class="card">
+    <h2>Semua kualitas</h2>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Kualitas</th><th>Ukuran</th><th>Per menit</th></tr>
+        </thead>
+        <tbody id="tabel"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <p class="note">Perkiraan rata-rata. Ukuran sebenarnya bisa berbeda tergantung isi video dan codec. 1 GB = 1.000 MB.</p>
+</main>
+
+<script src="javascript.js"></script>
+
+</body></html>
